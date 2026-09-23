@@ -1,0 +1,79 @@
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-hindi: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Color Palette */
+  --bg-primary: #0b0f19;
+  --bg-surface: #111827;
+  --bg-card: rgba(17, 24, 39, 0.85);
+  --bg-card-hover: rgba(31, 41, 55, 0.7);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(99, 102, 241, 0.5);
+
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --text-subtle: #6b7280;
+
+  --accent-primary: #6366f1;
+  --accent-primary-hover: #4f46e5;
+  --accent-glow: rgba(99, 102, 241, 0.25);
+
+  --color-spam: #ef4444;
+  --color-spam-bg: rgba(239, 68, 68, 0.12);
+  --color-spam-border: rgba(239, 68, 68, 0.35);
+  --color-spam-glow: rgba(239, 68, 68, 0.25);
+
+  --color-ham: #10b981;
+  --color-ham-bg: rgba(16, 185, 129, 0.12);
+  --color-ham-border: rgba(16, 185, 129, 0.35);
+  --color-ham-glow: rgba(16, 185, 129, 0.25);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 1px 1px var(--border-color);
+  --shadow-glow: 0 0 25px -5px var(--accent-glow);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+    radial-gradient(at 85% 85%, rgba(139, 92, 246, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, rgba(16, 185, 129, 0.04) 0px, transparent 40%);
+  background-attachment: fixed;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea {
+  font-family: var(--font-sans);
+  outline: none;
+  resize: vertical;
+}
+
+::selection {
+  background-color: rgba(99, 102, 241, 0.35);
+  color: #fff;
+}

@@ -1,0 +1,187 @@
+{
+  "timestamp": "2026-09-23 19:15:26",
+  "dataset_path": "data\\combined_bilingual_sms_training_ready.csv",
+  "total_records": 10998,
+  "exact_duplicates_removed": 0,
+  "post_dedup_records": 10998,
+  "class_distribution": {
+    "ham": 7506,
+    "spam": 3492
+  },
+  "language_distribution": {
+    "Hindi": 5840,
+    "English": 5158
+  },
+  "train_size": 8798,
+  "test_size": 2200,
+  "feature_count": 60000,
+  "models": {
+    "Logistic Regression": {
+      "accuracy": 0.990909090909091,
+      "precision_spam": 0.9985315712187959,
+      "recall_spam": 0.9728183118741058,
+      "f1_spam": 0.9855072463768116,
+      "confusion_matrix": [
+        [
+          1500,
+          1
+        ],
+        [
+          19,
+          680
+        ]
+      ],
+      "train_time_sec": 0.17745590209960938
+    },
+    "Linear SVM": {
+      "accuracy": 0.995,
+      "precision_spam": 1.0,
+      "recall_spam": 0.9842632331902719,
+      "f1_spam": 0.9920692141312184,
+      "confusion_matrix": [
+        [
+          1501,
+          0
+        ],
+        [
+          11,
+          688
+        ]
+      ],
+      "train_time_sec": 0.14026737213134766
+    }
+  },
+  "language_breakdown": {
+    "English": {
+      "Logistic Regression": {
+        "accuracy": 0.9802371541501976,
+        "precision": 0.9904761904761905,
+        "recall": 0.8455284552845529,
+        "f1": 0.9122807017543859,
+        "confusion_matrix": [
+          [
+            888,
+            1
+          ],
+          [
+            19,
+            104
+          ]
+        ]
+      },
+      "Linear SVM": {
+        "accuracy": 0.9891304347826086,
+        "precision": 1.0,
+        "recall": 0.9105691056910569,
+        "f1": 0.9531914893617022,
+        "confusion_matrix": [
+          [
+            889,
+            0
+          ],
+          [
+            11,
+            112
+          ]
+        ]
+      }
+    },
+    "Hindi": {
+      "Logistic Regression": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            612,
+            0
+          ],
+          [
+            0,
+            576
+          ]
+        ]
+      },
+      "Linear SVM": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            612,
+            0
+          ],
+          [
+            0,
+            576
+          ]
+        ]
+      }
+    }
+  },
+  "selected_model": "Linear SVM",
+  "sample_predictions": [
+    {
+      "category": "English Spam",
+      "text": "WINNER! You have won a guaranteed £1,000 cash prize or a holiday voucher! Call 09061701461 now to claim your code. T&Cs apply.",
+      "expected": "SPAM",
+      "pred_svm": "SPAM",
+      "svm_decision_score": 1.96,
+      "pred_lr": "SPAM",
+      "lr_spam_prob": 0.9799,
+      "status": "CORRECT"
+    },
+    {
+      "category": "English Ham",
+      "text": "Hey, are you free this afternoon? Let us meet at the library around 4 PM to work on our semester project.",
+      "expected": "HAM",
+      "pred_svm": "HAM",
+      "svm_decision_score": -0.7711,
+      "pred_lr": "HAM",
+      "lr_spam_prob": 0.0913,
+      "status": "CORRECT"
+    },
+    {
+      "category": "Hindi Spam",
+      "text": "बधाई हो! आपने ₹50,000 का नकद इनाम जीता है। अपनी पुरस्कार राशि तुरंत पाने के लिए लिंक पर क्लिक करें: https://prize-claim.in",
+      "expected": "SPAM",
+      "pred_svm": "SPAM",
+      "svm_decision_score": 1.7261,
+      "pred_lr": "SPAM",
+      "lr_spam_prob": 0.9979,
+      "status": "CORRECT"
+    },
+    {
+      "category": "Hindi Ham",
+      "text": "नमस्ते भाई, कल कॉलेज कितने बजे आना है? क्या तुम मुझे क्लास नोट्स और असाइनमेंट की पीडीएफ भेज सकते हो?",
+      "expected": "HAM",
+      "pred_svm": "HAM",
+      "svm_decision_score": -0.4559,
+      "pred_lr": "HAM",
+      "lr_spam_prob": 0.1969,
+      "status": "CORRECT"
+    },
+    {
+      "category": "Hinglish Spam",
+      "text": "Bhai congratulations! You have won ₹25,000 Paytm cashback reward. Claim immediately click url: http://paytm-reward.xyz",
+      "expected": "SPAM",
+      "pred_svm": "SPAM",
+      "svm_decision_score": 1.332,
+      "pred_lr": "SPAM",
+      "lr_spam_prob": 0.9224,
+      "status": "CORRECT"
+    },
+    {
+      "category": "Hinglish Ham",
+      "text": "Bhai kal exam hai na? Kab milna hai group study ke liye, call back kar lena free hoke.",
+      "expected": "HAM",
+      "pred_svm": "HAM",
+      "svm_decision_score": -0.7412,
+      "pred_lr": "HAM",
+      "lr_spam_prob": 0.1766,
+      "status": "CORRECT"
+    }
+  ]
+}
